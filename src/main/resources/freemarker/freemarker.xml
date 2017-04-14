@@ -41,7 +41,7 @@
 
 	<bean id="freemarkerStaticModelsProps"
 		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-		<property name="location" value="classpath*:freemarkerstatic.properties" />
+		<property name="location" value="classpath:freemarkerstatic.properties" />
 	</bean>
 
 	<bean id="freemarkerStaticModels" class="com.dc.framework.freemarker.FreemarkerStaticModels"
