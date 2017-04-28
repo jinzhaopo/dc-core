@@ -12,12 +12,10 @@ import com.dc.common.WebErrors;
 import net.sf.json.JSONObject;
 
 /**
+ * HttpServletResponse帮助类
  * 
- * @ClassName: ResponseUtils
- * @Description: HttpServletResponse
- * @author: jinzhaopo
- * @version: V1.0
- * @date: 2017年4月13日 下午4:00:39
+ * @author zhenglong
+ * 
  */
 public final class ResponseUtils {
 	public static final Logger log = LoggerFactory.getLogger(ResponseUtils.class);
@@ -128,30 +126,13 @@ public final class ResponseUtils {
 	// }
 
 	// 输出后台 JSON错误消息，返回null
-	/**
-	 * 
-	 * @Title: ajaxJsonErrorMessage
-	 * @Description: 输出后台 JSON错误消息，返回null
-	 * @param message
-	 * @param response
-	 * @return
-	 * @return: String
-	 */
 	public static String ajaxJsonErrorMessage(String message, HttpServletResponse response) {
 		WebErrors errors = WebErrors.create();
 		errors.addErrorString(message);
 		return errors.showErrorAjax(response);
 	}
 
-	/**
-	 * 
-	 * @Title: ajaxJsonFrontErrorMessage
-	 * @Description: 输出前台JSON错误消息，返回null
-	 * @param message
-	 * @param response
-	 * @return
-	 * @return: String
-	 */
+	// 输出前台JSON错误消息，返回null
 	public static String ajaxJsonFrontErrorMessage(String message, HttpServletResponse response) {
 		WebErrors errors = WebErrors.create();
 		errors.addErrorString(message);

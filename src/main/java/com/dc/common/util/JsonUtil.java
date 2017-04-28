@@ -3,7 +3,6 @@ package com.dc.common.util;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.lang.reflect.Field;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -14,7 +13,6 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -62,8 +60,8 @@ public class JsonUtil {
 			mapper = getMapper();
 			StringWriter out = new StringWriter();
 			jg = jf.createGenerator(out);
-			mapper.writeValue(jg, obj);
-
+			mapper.writeValue(jg, obj);			
+			
 			return out.toString();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -173,7 +171,7 @@ public class JsonUtil {
 		}
 		return list;
 	}
-
+	
 	public static void main(String[] args) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("key", 123);
