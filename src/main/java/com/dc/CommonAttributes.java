@@ -29,5 +29,18 @@ public class CommonAttributes {
 	 * 树的编码分隔符
 	 */
 	public static final char TREE_SEPARATE = '.';
+	/**
+	 * 是在request里面传递的
+	 */
+	public static final String WEBERRORS = "WebErrors";
+
+	/**
+	 * 公共的错误页面
+	 */
+	public static final String WEBERRORS_URL_REQUEST = "/admin/common/error.jhtml";
+	/**
+	 * 公共的错误页面
+	 */
+	public static final String WEBERRORS_URL = "/admin/common/error";
 
 }
